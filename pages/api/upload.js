@@ -1,9 +1,8 @@
 import multer from 'multer';
 import path from 'path';
-import nextConnect from 'next-connect';
+import { spawn } from 'child_process';
 import fs from 'fs';
 
-// Configure Multer storage
 const storage = multer.diskStorage({
   destination: './public/uploads',
   filename: (req, file, cb) => {
@@ -22,16 +21,51 @@ export const config = {
   },
 };
 
+const runPythonScript = (videoFilePath) => {
+  return new Promise((resolve, reject) => {
+    const processPython = spawn('python3', ['./scripts/process_video.py', videoFilePath]);
+
+    let jsonData = '';
+
+    processPython.stdout.on('data', (data) => {
+      jsonData += data.toString();
+    });
+
+    processPython.stderr.on('data', (data) => {
+      console.error(`stderr: ${data}`);
+    });
+
+    processPython.on('close', (code) => {
+      if (code === 0) {
+        try {
+          const result = JSON.parse(jsonData);
+          resolve(result);
+        } catch (error) {
+          reject(new Error('Failed to parse JSON from Python script'));
+        }
+      } else {
+        reject(new Error('Failed to process video'));
+      }
+    });
+  });
+};
+
 const handler = async (req, res) => {
   if (req.method === 'POST') {
-    upload.single('video')(req, res, (err) => {
-      if (err) {
-        return res.status(500).json({ error: err.message });
-      }
+    try {
+      await new Promise((resolve, reject) => {
+        upload.single('video')(req, res, (err) => {
+          if (err) return reject(err);
+          resolve();
+        });
+      });
 
-      // Return the path to the uploaded file
-      res.status(200).json({ filePath: `/uploads/${req.file.filename}` });
-    });
+      const videoFilePath = path.join(process.cwd(), 'public', 'uploads', req.file.filename);
+      const result = await runPythonScript(videoFilePath);
+      res.status(200).json(result);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
   } else {
     res.setHeader('Allow', ['POST']);
     res.status(405).end(`Method ${req.method} Not Allowed`);

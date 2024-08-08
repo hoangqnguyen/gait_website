@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from 'react';
 import axios from 'axios';
 
 function Example({ setShowFolder }) {
@@ -17,7 +17,7 @@ function Example({ setShowFolder }) {
   };
 
   const handleVideoControl = (action) => {
-    if (typeof window === 'undefined') return; // Ensure this runs only in the browser
+    if (typeof window === 'undefined') return;
 
     const video = videoRef.current;
     if (!video) return;
@@ -64,6 +64,7 @@ function Component1({ onFileUpload }) {
   const [file, setFile] = useState(null);
   const [message, setMessage] = useState('');
   const [uploadedFilePath, setUploadedFilePath] = useState('');
+  const [jsonData, setJsonData] = useState(null);
   const fileInputRef = useRef(null);
 
   const handleFileChange = async (event) => {
@@ -71,7 +72,7 @@ function Component1({ onFileUpload }) {
     if (selectedFile && selectedFile.type.startsWith('video')) {
       setFile(selectedFile);
       setMessage('');
-      await onSubmit(selectedFile); // Automatically submit the file for upload
+      await onSubmit(selectedFile);
     } else {
       alert("비디오 파일을 업로드해주세요.");
     }
@@ -95,7 +96,9 @@ function Component1({ onFileUpload }) {
       });
       setMessage('File uploaded successfully');
       setUploadedFilePath(res.data.filePath);
-      onFileUpload(); // Notify parent component about the file upload
+      setJsonData(res.data);
+      console.log('Video processing result:', res.data); // Log the result to the console
+      onFileUpload();
       setShowFolder(false);
     } catch (err) {
       setMessage('File upload failed');
@@ -131,6 +134,9 @@ function Component1({ onFileUpload }) {
               <source src={uploadedFilePath} type="video/mp4" />
               Your browser does not support HTML video.
             </video>
+          )}
+          {jsonData && (
+            <pre>{JSON.stringify(jsonData, null, 2)}</pre>
           )}
         </>
       )}
