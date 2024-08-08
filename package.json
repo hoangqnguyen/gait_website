@@ -1,0 +1,20 @@
+{
+  "name": "gaitweb",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^1.7.3",
+    "multer": "^1.4.5-lts.1",
+    "next": "14.2.5",
+    "next-connect": "^0.12.0",
+    "next-file": "^1.0.5",
+    "react": "^18",
+    "react-dom": "^18"
+  }
+}
