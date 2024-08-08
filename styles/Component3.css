@@ -1,0 +1,71 @@
+.div-wrapper {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px #0084ff40;
+    height: 40%;
+    position : absolute;
+    width: 40%;
+    left : 30%;
+    top : 30%;
+}
+
+.div-wrapper .overlap-group3 {
+  background-color: #f7f6f9;
+  border-radius: 20px;
+  height: 70%;
+  left: 15%;
+  position: relative;
+  top: 15%;
+  width: 70%;
+}
+
+.div-wrapper .overlap {
+  all : unset;
+  background-color: #0084ff;
+  border-radius: 12px;
+  height: 1.3vw;
+  left: 80%;
+  position: absolute;
+  top: 80%;
+  width: 4vw !important;
+  cursor : pointer;
+}
+
+.div-wrapper .text-wrapper {
+  all : unset;
+  color: #ffffff;
+  font-family: "Noto Sans KR-Bold", Helvetica;
+  font-size: 0.8vw;
+  font-weight: 700;
+  left: 10% !important;
+  letter-spacing: 0;
+  line-height: 20px;
+  position: absolute;
+  text-align: center !important;
+  top: 10% !important;
+  white-space: nowrap;
+}
+
+
+.div-wrapper .progress_bar {
+    position : relative;
+    left : 5%;
+    top : 55%;
+    width : 25vw;
+    height : 1.5vw
+}
+
+
+.div-wrapper .text {
+  color: #000000;
+  font-family: "Noto Sans KR-Bold", Helvetica;
+  font-size: 1.1vw;
+  font-weight: 700;
+  left: 32%;
+  letter-spacing: 0;
+  line-height: 72px;
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  white-space: nowrap;
+}

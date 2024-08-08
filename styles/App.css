@@ -1,0 +1,189 @@
+.App {
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+}
+
+.App .overlap {
+    height: 607px;
+    width: 100%;
+    left : 0;
+    position: absolute;
+    top: 20%;
+}
+
+.App .gait_assessment {
+    color: #000000;
+    font-family: "Noto Sans KR-Bold", Helvetica;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 72px;
+    position: relative;
+    text-align: center;
+    top: 79px;
+    text-decoration: none; /* 텍스트 밑줄 제거 */
+}
+
+.App .image_mountain {
+    height: 145px;
+    left: 0;
+    position: absolute;
+    top: 80.7%;
+    width: 100%;
+}
+
+.App .image_cloud1 {
+    height: 85px;
+    left: 10.7%;
+    position: absolute;
+    top: 55%;
+    width: 10%;
+}
+
+.App .image_cloud2 {
+    height: 85px;
+    left: 44.2%;
+    position: absolute;
+    top: 65%;
+    width: 10%;
+}
+
+.App .image_cloud3 {
+    height: 85px;
+    left: 73.4%;
+    position: absolute;
+    top: 55%;
+    width: 10%;
+}
+
+.App .image_men {
+    height: 20%;
+    left: 13.9%;
+    position: absolute;
+    top: 80%;
+    width: 30%;
+    min-width: 20%;
+}
+
+.App .image_women {
+    height: 20%;
+    left: 54.1%;
+    position: absolute;
+    top: 80%;
+    width: 30%;
+    min-width: 20%;
+}
+
+.App .main_start {
+    color: #ffffff;
+    font-family: "Noto Sans KR-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    top: 10%;
+    position: relative;
+    left: 47%;
+    text-align: right;
+    width: fit-content;
+    align-items: flex-start;
+    background-color: #0084ff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    padding: 8px 16px;
+    border: none;  /* 기본 테두리 제거 */
+    cursor: pointer;  /* 버튼 커서 유지 */
+    text-decoration: none; /* 텍스트 밑줄 제거 */
+    color: white;
+}
+
+.App .main_nav {
+    background-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #f7f6f9;
+    box-shadow: 0px 0px 20px -2px #0000000d;
+    height: 72px;
+    position: absolute;
+    width: 100%;
+    left : 0;
+}
+
+.App .logo {
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(180deg, rgb(0, 132.6, 255) 0%, rgba(25.52, 11, 114.75, 0.78) 100%);
+    background-clip: text;
+    color: transparent;
+    font-family: "Noto Sans KR-Black", Helvetica;
+    font-size: 20px;
+    font-weight: 900;
+    left: 13%;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    width: fit-content;
+    text-fill-color: transparent;
+    top: 21px;
+    border: none;  /* 기본 테두리 제거 */
+    cursor: pointer;  /* 버튼 커서 유지 */
+    text-decoration: none; /* 텍스트 밑줄 제거 */
+}
+
+.App .name {
+    color: #999999;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    left: 70%;
+    width: fit-content;
+    line-height: normal;
+    position: relative;
+    top: 0px;
+}
+
+.App .history {
+    color: #000000;
+    font-family: "Noto Sans KR-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 74.5%;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+    top: -35%;
+    text-align: right;
+    width: fit-content;
+    background-color: #ffffff;
+    border: none;  /* 기본 테두리 제거 */
+    cursor: pointer;  /* 버튼 커서 유지 */
+    text-decoration: none; /* 텍스트 밑줄 제거 */
+}
+
+
+.App .start {
+    color: #ffffff;
+    font-family: "Noto Sans KR-Bold", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    top: -35%;
+    position: relative;
+    left: 76.5%;
+    text-align: right;
+    width: fit-content;
+    align-items: flex-start;
+    background-color: #0084ff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    padding: 8px 16px;
+    border: none;  /* 기본 테두리 제거 */
+    cursor: pointer;  /* 버튼 커서 유지 */
+    text-decoration: none; /* 텍스트 밑줄 제거 */
+}

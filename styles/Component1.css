@@ -1,0 +1,88 @@
+.div-wrapper {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px #0084ff40;
+    height: 40%;
+    position : relative;
+    width: 40%;
+    left : 30%;
+    top : 30%;
+}
+
+.div-wrapper .overlap-group1 {
+    background-color: #f7f6f9;
+    border-radius: 20px;
+    height: 40% !important;
+    position: absolute;
+    width: 20% !important;
+    left : 40% !important;
+    top : 30% !important;
+}
+
+.div-wrapper .image_folder {
+    position : absolute;
+    display : flex;
+    justify-content:center;
+    align-items : center;
+    height: 100%;
+    width: 100%;
+}
+
+
+.div-wrapper .group {
+    background-color: #ffffff;
+    border-radius: 25px;
+    height: 50px;
+    left: 49px;
+    position: absolute;
+    top: 36px;
+    width: 50px;
+}
+
+.div-wrapper .caution {
+    color: #000000;
+    font-family: "Noto Sans KR-Bold", Helvetica;
+    font-size: 0.9vw;
+    font-weight: 40%;
+    left : 20%;
+    text-align : center;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 10%;
+    white-space: nowrap;
+}
+
+.div-wrapper .example_word {
+    all : unset;
+    color: #ffffff;
+    background-color: #0084ff;
+    width: 7vw;
+    height: 1.3vw;
+    border-radius: 12px;
+    font-family: "Noto Sans KR-Bold", Helvetica;
+    font-size: 0.7vw;
+    font-weight: 400;
+    left: 41.5%;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 80%;
+    cursor: pointer;  /* 클릭 가능한 커서 스타일 */
+}
+
+.div-wrapper .video_display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.div-wrapper .button_container {
+    margin-top: 0px;
+}
